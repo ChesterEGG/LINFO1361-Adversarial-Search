@@ -282,7 +282,7 @@ if __name__ == "__main__":
         python replayer.py logs/log_0.txt
     """
     parser = argparse.ArgumentParser(description="Replay Oxono game")
-    parser.add_argument("file", type=str, help="Path to the saved log of the game")
+    parser.add_argument("file", type=str,default= "logs/log_4.txt", help="Path to the saved log of the game")
     args = parser.parse_args()
 
     r = Replayer(args.file)
