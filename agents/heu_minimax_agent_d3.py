@@ -1,14 +1,16 @@
 import math
 
 
-from agent import Agent
+from agents.agent import Agent
 from oxono import Game
+from heuristics.heuristic_v1 import Evaluator
 
 
 class MinimaxAgent(Agent):
-    def __init__(self, player, depth=4):
+    def __init__(self, player, depth=3):
         super().__init__(player)
         self.depth = depth
+        self.evaluator = Evaluator(self.player)
 
     def act(self, state, remaining_time):
         """
@@ -46,9 +48,9 @@ class MinimaxAgent(Agent):
 
         # Condition d'arrêt
         if Game.is_terminal(state):
-            return self.evaluate(state)
+            return self.evaluator.evaluate(state)
         if depth == 0:
-            return self.evaluate(state)
+            return self.evaluator.evaluate(state)
 
         # Tour de l'agent
         if maximizing:
@@ -76,17 +78,4 @@ class MinimaxAgent(Agent):
 
 
 
-    def evaluate(self, state):
-        """
-        Fonction qui évalue la feuille de l'arbre
-        """
-        if Game.is_terminal(state):
-            utility = Game.utility(state, self.player)
-            if utility > 0:
-                return 99999
-            elif utility < 0:
-                return -99999
-            else:
-                return 0
 
-        return 0
