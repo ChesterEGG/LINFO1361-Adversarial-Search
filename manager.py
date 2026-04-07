@@ -229,12 +229,15 @@ if __name__ == "__main__":
     BASE_MINIMAX_AGENT_d4 = "agents/base_minimax_agent_d4.py"
     HEU_MINIMAX_AGENT_d3 = "agents/heu_minimax_agent_d3.py"
     HEU_MINIMAX_AGENT_d4 = "agents/heu_minimax_agent_d4.py"
-    HEU_ALPHABETA_AGENT_d4 = "agents/heu_alphabeta_agent.py"
+    HEU_ALPHABETA_AGENT_d5 = "agents/heu_alphabeta_agent_d5.py"
+    HEU_ALPHABETA_AGENT_d4 = "agents/heu_alphabeta_agent_d4.py"
+    HEU_ALPHABETA_AGENT_MO_d5 = "agents/heu_alphabeta_agent_MO_d5.py"
+    HEU_ALPHABETA_AGENT_MO_d6 = "agents/heu_alphabeta_agent_MO_d6.py"
 
     parser = argparse.ArgumentParser(description="Run Oxono games between two agents")
     parser.add_argument("-n", type=int, default=1, help="Number of games to run (default: 1)")
-    parser.add_argument("-p0", type=str, default=HEU_ALPHABETA_AGENT_d4, help="First player file (default: random_agent.py)")
-    parser.add_argument("-p1", type=str, default=HEU_MINIMAX_AGENT_d3, help="Second player file (default: random_agent.py)")
+    parser.add_argument("-p0", type=str, default=HEU_ALPHABETA_AGENT_MO_d5, help="First player file (default: random_agent.py)")
+    parser.add_argument("-p1", type=str, default=HEU_ALPHABETA_AGENT_d5, help="Second player file (default: random_agent.py)")
     parser.add_argument("-l", type=str, default="logs", metavar="LOG_DIR", help="Log directory (default: no logging)")
     parser.add_argument("-t", type=int, default=300, help="Time limit for each player (default: 300)")
     args = parser.parse_args()

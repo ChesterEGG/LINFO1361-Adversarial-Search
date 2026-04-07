@@ -6,7 +6,7 @@ from oxono import Game
 from heuristics.heuristic_v1 import Evaluator
 
 class AlphaBetaAgent(Agent):
-    def __init__(self, player, depth=6):
+    def __init__(self, player, depth=5):
         super().__init__(player)
         self.depth = depth
         self.evaluator = Evaluator(self.player)
@@ -87,3 +87,5 @@ class AlphaBetaAgent(Agent):
                     break
 
             return min_eval
+
+        
