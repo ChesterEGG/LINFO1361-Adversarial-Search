@@ -1,8 +1,8 @@
 import math
 
 
-from files_69712200_67672400.agent import Agent
-from files_69712200_67672400.oxono import Game
+from agent import Agent
+from oxono import Game
 from files_69712200_67672400.heuristic import Evaluator
 
 
