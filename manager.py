@@ -236,11 +236,12 @@ if __name__ == "__main__":
     HEU_ALPHABETA_AGENT_MO_DI = "agents/heu_alphabeta_agent_MO_DI.py"
     HEU2_ALPHABETA_AGENT_MO_d6 = "agents/heu2_alphabeta_agent_MO_d6.py"
     HEU2_ALPHABETA_AGENT_MO_DI = "agents/heu2_alphabeta_agent_MO_DI.py"
+    HEU3_ALPHABETA_AGENT_MO_DI = "agents/heu3_alphabeta_agent_MO_DI.py"
 
 
     parser = argparse.ArgumentParser(description="Run Oxono games between two agents")
-    parser.add_argument("-n", type=int, default=1, help="Number of games to run (default: 1)")
-    parser.add_argument("-p0", type=str, default=HEU_ALPHABETA_AGENT_MO_DI, help="First player file (default: random_agent.py)")
+    parser.add_argument("-n", type=int, default=3, help="Number of games to run (default: 1)")
+    parser.add_argument("-p0", type=str, default=HEU3_ALPHABETA_AGENT_MO_DI, help="First player file (default: random_agent.py)")
     parser.add_argument("-p1", type=str, default=HEU2_ALPHABETA_AGENT_MO_DI, help="Second player file (default: random_agent.py)")
     parser.add_argument("-l", type=str, default="logs", metavar="LOG_DIR", help="Log directory (default: no logging)")
     parser.add_argument("-t", type=int, default=300, help="Time limit for each player (default: 300)")

@@ -2,10 +2,9 @@ import math
 import time
 import random
 
-
-from agent import Agent
+from agents.agent import Agent
 from oxono import Game
-from files_69712200_67672400.heuristic import Evaluator
+from heuristics.heuristic_v3 import Evaluator
 
 
 # Création d'une exception personnalisée pour le chronomètre
