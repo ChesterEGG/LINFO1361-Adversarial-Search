@@ -15,6 +15,7 @@ class Evaluator:
         self.weight_fork = 2000 # Poids pour une fourchettes
         self.weight_teleportation = 4000 # Poids pour la possibilité de téléprotation du totem
         self.weight_kiting = 50 # Poids par case d'éloignement tactique
+        self.extension_threshold = (self.weight_critical + self.weight_structure) / 2 # Poids qui détermine une situation critique où les extensions doivent etre appeler
 
     def evaluate(self, state, current_depth=0):
         """

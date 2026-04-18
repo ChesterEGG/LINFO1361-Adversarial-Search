@@ -2,10 +2,9 @@ import math
 import time
 import random
 
-
-from agent import Agent
+from agents.agent import Agent
 from oxono import Game
-from files_69712200_67672400.heuristic import Evaluator
+from heuristics.heuristic_v4 import Evaluator
 
 
 # Création d'une exception personnalisée pour le chronomètre
@@ -46,8 +45,8 @@ class IterativeDeepeningAgent(Agent):
             actions = Game.actions(state)
             # On utilise le tri qui valorise le centre et on joue le premier choix instantanément
             actions_triees = self.sort_action(state, actions, 1)
-            # On prend au hasard l'un des 4 meilleurs coups d'ouverture
-            top_n = min(4, len(actions_triees))
+            # On prend au hasard l'un des 8 meilleurs coups d'ouverture
+            top_n = min(8, len(actions_triees))
             return random.choice(actions_triees[:top_n])
 
         # Gestion du temps
